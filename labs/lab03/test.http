@@ -1,0 +1,59 @@
+GET http://localhost:3000/films
+
+###
+
+GET http://localhost:3000/films/favorite
+
+###
+
+GET http://localhost:3000/films/best
+
+###
+
+GET http://localhost:3000/films/lastMonth
+
+###
+
+GET http://localhost:3000/films/unseen
+
+###
+
+GET http://localhost:3000/films/3
+
+###
+
+POST http://localhost:3000/films
+content-type: application/json
+
+{
+    "title": "my film",
+    "isFavorite": 1,
+    "rating": 3,
+    "watchDate": "2024-03-05",
+    "userId": 1
+}
+
+###
+
+PUT http://localhost:3000/films/6
+content-type: application/json
+
+{
+    "title": "my film updated",
+    "isFavorite": 1,
+    "rating": 3,
+    "watchDate": "2024-03-05",
+    "userId": 1
+}
+
+###
+
+PUT http://localhost:3000/films/6/rating/5
+
+###
+
+PUT http://localhost:3000/films/6/isFavorite/1
+
+###
+
+DELETE http://localhost:3000/films/7
