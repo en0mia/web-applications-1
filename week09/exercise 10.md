@@ -1,23 +1,22 @@
-# Exercise 10: Forms and state
+# Exercise 11: Adding multiple pages
 
-_Goal: Managing forms and related states in the "HeapOverrun" React app developed last week._
+_Goal: Managing routes in the "HeapOverrun" React app developed last week._
 
-## Add a new answer (II part)
+Starting from the app developed last week, incorporate React Router to enable multiple pages within the application.
 
-Starting from the form defined in the previous exercise, handle the insertion of a new answer in the table. Use the defined state to perform this operation.
+Realize four different pages:
 
-## To use state or not to use state
+1. **All the questions** in a list (`index`). _Clicking on one of them will bring you to the page described at point 2_.
+2. **Single question and its answers**, i.e., the current content of the application.
 
-Make the entire form appear and disappear through a suitable button at the end of the table. Do you need a new state?
 
-Now, sort the table content by clicking on the "Score" header. For simplicity, a first click will sort the table from the lowest value to the highest and a second click from the highest to the lowest. Do you need a new state?
+    - Clicking an "add" button will open the page to add a new answer.
+    - The "edit" button will bring to the same page but in editing mode.
 
-## Edit an answer
+3. Add/edit an answer, i.e., the form already in the app. _Submitting the form will bring you to the page described at point 3_.
+4. Properly **handle wrong URLs** by providing a _404 Not Found page_.
 
-Add a new "edit" button to the actions available for each answer row. When pressed, re-use the form on the question page to edit the chosen answer. Handle the state update accordingly.
+## Extra: managing different questions
 
-What happens when you edit two answers, one after the other, without submitting the form? Why? How can you solve the issue?
-
-## Delete an answer (optional)
-
-By clicking on the "delete" button associated with an answer, the answer should be deleted from the table (and the state).
+Implements a route where the user can find all the asked questions.
+Restructure the application in a proper way to manage this change.
